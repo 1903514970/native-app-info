@@ -19,9 +19,10 @@
  *
 */
 
+var exec = require('cordova/exec');
 
 module.exports = {
     get:function (message,successCallback,failedCallback) {
-        cordova.exec(successCallback,failedCallback,"NativeAppInfo","get",[message]);
+        exec(successCallback,failedCallback,"NativeAppInfo","get",[message]);
     }
 };

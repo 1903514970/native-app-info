@@ -1,4 +1,4 @@
-package com.example.hello.cordova_plugins;
+package com.sobey.cordova_plugins.nativeAppInfo;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
