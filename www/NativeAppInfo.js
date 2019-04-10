@@ -22,6 +22,6 @@
 
 module.exports = {
     get:function (message,successCallback,failedCallback) {
-        exec(successCallback,failedCallback,"NativeAppInfo","get",[message]);
+        cordova.exec(successCallback,failedCallback,"NativeAppInfo","get",[message]);
     }
 };
