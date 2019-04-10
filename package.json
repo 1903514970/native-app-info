@@ -1,0 +1,28 @@
+{
+  "name": "native-app-info",
+  "version": "1.0.0",
+  "description": "Cordova native-app-info Plugin",
+  "types": "./types/index.d.ts",
+  "cordova": {
+    "id": "native-app-info",
+    "platforms": [
+      "android",
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apache/cordova-plugin-device"
+  },
+  "keywords": [
+    "native-app-info",
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "scripts": {
+    "test": "npm run eslint",
+    "eslint": "node node_modules/eslint/bin/eslint www && node node_modules/eslint/bin/eslint src && node node_modules/eslint/bin/eslint tests"
+  },
+  "author": "dengjun",
+  "license": "Apache-2.0"
+}
