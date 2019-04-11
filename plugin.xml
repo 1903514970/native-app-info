@@ -37,7 +37,7 @@
 
         <!-- android specific notification apis -->
         <js-module src="www/NativeAppInfo.js" name="NativeAppInfo">
-            <clobbers target="NativeAppInfo"/>
+            <clobbers target="nativeAppInfo"/>
         </js-module>
 
     </platform>
