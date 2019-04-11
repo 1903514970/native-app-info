@@ -12,12 +12,13 @@ public class NativeAppInfo extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, String rawArgs, CallbackContext callbackContext) throws JSONException {
-        if("get".equals(action)){
-            if("userInfo".equals(rawArgs)){
-                callbackContext.success("{\"name\":\"dja\",\"token\":\"21312312313\"}");
-            }
-            return true;
-        }
+        rawArgs = rawArgs.substring(1,rawArgs.length()-1);
+       if("get".equals(action)){
+           if("userInfo".equals(rawArgs)){
+               callbackContext.success("{\"name\":\"dja\",\"token\":\"21312312313\"}");
+           }
+           return true;
+       }
         return super.execute(action, rawArgs, callbackContext);
     }
 }

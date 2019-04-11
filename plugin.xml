@@ -36,7 +36,7 @@
         <source-file src="src/android/NativeAppInfo.java" target-dir="src/com/sobey/cordova_plugins/nativeAppInfo"/>
 
         <!-- android specific notification apis -->
-        <js-module src="www/NativeAppInfo.js" name="NativeAppInfo">
+        <js-module src="www/NativeAppInfo.js" name="nativeAppInfo">
             <clobbers target="nativeAppInfo"/>
         </js-module>
 
