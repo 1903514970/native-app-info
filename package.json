@@ -1,23 +1,29 @@
 {
   "name": "native-app-info",
   "version": "1.0.0",
-  "description": "Cordova native-app-info Plugin",
+  "description": "Cordova appInfo Plugin",
   "cordova": {
     "id": "native-app-info",
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/1903514970/native-app-info.git"
+    "url": "git+https://github.com/1903514970/native-app-info.git"
   },
   "keywords": [
-    "native-app-info",
     "cordova",
+    "native-app-info",
     "ecosystem:cordova",
-    "cordova-android"
+    "cordova-android",
+    "cordova-ios"
   ],
   "author": "dengjun",
-  "license": "Apache-2.0"
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/1903514970/native-app-info/issues"
+  },
+  "homepage": "https://github.com/1903514970/native-app-info#readme"
 }

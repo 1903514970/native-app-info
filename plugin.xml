@@ -25,6 +25,11 @@
     <license>Apache 2.0</license>
     <keywords>cordova,native-app-info</keywords>
 
+	
+	<js-module src="www/NativeAppInfo.js" name="nativeAppInfo">
+		<clobbers target="nativeAppInfo"/>
+	</js-module>
+
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
@@ -34,11 +39,15 @@
         </config-file>
 
         <source-file src="src/android/NativeAppInfo.java" target-dir="src/com/sobey/cordova_plugins/nativeAppInfo"/>
+    </platform>
 
-        <!-- android specific notification apis -->
-        <js-module src="www/NativeAppInfo.js" name="nativeAppInfo">
-            <clobbers target="nativeAppInfo"/>
-        </js-module>
-
+	<platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="NativeAppInfo">
+                <param name="ios-package" value="NativeAppInfo"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/nativeAppInfo.h" />
+        <source-file src="src/ios/nativeAppInfo.m" />
     </platform>
 </plugin>
