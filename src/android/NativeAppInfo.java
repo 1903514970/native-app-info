@@ -1,6 +1,7 @@
 package com.sobey.cordova_plugins.nativeAppInfo;
 
 import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaArgs;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONException;
 
@@ -11,14 +12,13 @@ import org.json.JSONException;
 public class NativeAppInfo extends CordovaPlugin {
 
     @Override
-    public boolean execute(String action, String rawArgs, CallbackContext callbackContext) throws JSONException {
-        rawArgs = rawArgs.substring(1,rawArgs.length()-1);
-       if("get".equals(action)){
-           if("userInfo".equals(rawArgs)){
-               callbackContext.success("{\"name\":\"dja\",\"token\":\"21312312313\"}");
-           }
-           return true;
-       }
-        return super.execute(action, rawArgs, callbackContext);
+    public boolean execute(String action, CordovaArgs args, CallbackContext callbackContext) throws JSONException {
+        if("get".equals(action)){
+            if("userInfo".equals(args.getString(0))){
+                callbackContext.success("{\"name\":\"dja\",\"token\":\"21312312313\"}");
+            }
+            return true;
+        }
+        return super.execute(action, args, callbackContext);
     }
 }
